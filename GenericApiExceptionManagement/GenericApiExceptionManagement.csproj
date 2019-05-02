@@ -1,11 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>David Vanderheyden</Authors>
-    <Description>A centralized exception handler for use with loose coupled API</Description>
+    <Description>A centralized exception handler for use with loose coupled dotnet Core API</Description>
     <RepositoryUrl>https://github.com/Cr3ature/CentralizedAPIExceptionHandler</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Product>CAPIEH</Product>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
