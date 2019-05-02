@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GenericApiExceptionManagement
+namespace CAPIEH
 {
     /// <summary>
     /// Details of an API error.

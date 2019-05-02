@@ -1,4 +1,4 @@
-﻿namespace GenericApiExceptionManagement
+﻿namespace CAPIEH
 {
     /// <summary>
     /// Supported error types.

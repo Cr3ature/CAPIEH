@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace GenericApiExceptionManagement
+namespace CAPIEH
 {
     internal class ExceptionMiddleware
     {

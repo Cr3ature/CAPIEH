@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GenericApiExceptionManagement
+namespace CAPIEH
 {
     [Serializable]
     public class DataEntityNotFoundException : Exception

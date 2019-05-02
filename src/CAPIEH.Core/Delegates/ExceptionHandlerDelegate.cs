@@ -2,7 +2,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace GenericApiExceptionManagement
+namespace CAPIEH
 { 
     public delegate Task ExceptionHandler(HttpContext context, Exception exception, Guid errorId);
 }

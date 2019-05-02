@@ -1,4 +1,4 @@
-﻿namespace GenericApiExceptionManagement
+﻿namespace CAPIEH
 {
     public enum ApiResponseStatus
     {

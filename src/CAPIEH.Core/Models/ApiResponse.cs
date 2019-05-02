@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace GenericApiExceptionManagement
+namespace CAPIEH
 {
     /// <summary>
     /// Response for API request success.
