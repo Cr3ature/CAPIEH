@@ -18,7 +18,7 @@ namespace CAPIEH
         public ApiResponse(TOutputType outputType, ApiResponseStatus status = ApiResponseStatus.Ok)
         {
             Data = outputType;
-            Status = status.Equals(ApiResponseStatus.Ok).ToString();
+            Status = ApiResponseStatus.Ok.ToString();
             StatusCode = HttpStatusCode.OK;
         }
 
@@ -31,7 +31,7 @@ namespace CAPIEH
         public ApiResponse(TOutputType outputType, HttpStatusCode statusCode, ApiResponseStatus status = ApiResponseStatus.Ok)
         {
             Data = outputType;
-            Status = status.Equals(ApiResponseStatus.Ok).ToString();
+            Status = ApiResponseStatus.Ok.ToString();
             StatusCode = StatusCode;
         }
 
