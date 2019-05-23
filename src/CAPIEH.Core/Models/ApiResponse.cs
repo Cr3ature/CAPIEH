@@ -32,7 +32,7 @@ namespace CAPIEH
         {
             Data = outputType;
             Status = ApiResponseStatus.Ok.ToString();
-            StatusCode = StatusCode;
+            StatusCode = statusCode;
         }
 
         /// <summary>
