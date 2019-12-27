@@ -7,7 +7,7 @@
 // <date>25/05/2019 11:11:08</date>
 //-----------------------------------------------------------------------
 
-namespace Puratos.PreWeighing.Host.ExceptionManagement
+namespace CAPIEH.Core.Extensions
 {
     using System.Collections;
     using System.Net;
