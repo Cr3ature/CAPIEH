@@ -2,7 +2,7 @@
 // <copyright file="ApiResponse.cs" company="David Vanderheyden">
 //     Copyright (c) 2020 All Rights Reserved
 // </copyright>
-// <licensed>Distributed under Apache2.0 license</licensed>
+// <licensed>Distributed under MIT license</licensed>
 // <author>David Vanderheyden</author>
 //-----------------------------------------------------------------------
 
