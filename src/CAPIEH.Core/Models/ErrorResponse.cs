@@ -1,10 +1,9 @@
 //-----------------------------------------------------------------------
 // <copyright file="ErrorResponse.cs" company="David Vanderheyden">
-//     Copyright (c) 2019 All Rights Reserved
+//     Copyright (c) 2020 All Rights Reserved
 // </copyright>
-// <licensed>Distributed under Apache2.0 license</licensed>
+// <licensed>Distributed under MIT license</licensed>
 // <author>David Vanderheyden</author>
-// <date>25/05/2019 11:11:32</date>
 //-----------------------------------------------------------------------
 
 namespace CAPIEH
@@ -16,7 +15,7 @@ namespace CAPIEH
     /// Error response for API request failures.
     /// </summary>
     [Serializable]
-    public class ErrorResponse
+    public sealed class ErrorResponse
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ErrorResponse"/> class.
@@ -52,5 +51,12 @@ namespace CAPIEH
         /// Gets the StatusCode The <see cref="HttpStatusCode"/>.
         /// </summary>
         public HttpStatusCode StatusCode { get; }
+
+        /// <summary>
+        /// Gets a apiResponse to return.
+        /// </summary>
+        /// <returns>A composed API response model  <see cref="ApiResponse{Boolean?}"/>.</returns>
+        public ApiResponse<bool?> GetApiResponse()
+            => new ApiResponse<bool?>(this);
     }
 }

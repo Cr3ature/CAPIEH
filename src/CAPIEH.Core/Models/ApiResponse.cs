@@ -1,10 +1,9 @@
 //-----------------------------------------------------------------------
 // <copyright file="ApiResponse.cs" company="David Vanderheyden">
-//     Copyright (c) 2019 All Rights Reserved
+//     Copyright (c) 2020 All Rights Reserved
 // </copyright>
-// <licensed>Distributed under Apache2.0 license</licensed>
+// <licensed>Distributed under MIT license</licensed>
 // <author>David Vanderheyden</author>
-// <date>25/05/2019 11:10:17</date>
 //-----------------------------------------------------------------------
 
 namespace CAPIEH
@@ -22,26 +21,21 @@ namespace CAPIEH
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiResponse{TOutputType}"/> class.
         /// </summary>
-        /// <param name="outputType">Generic outputType.</param>
-        /// <param name="status">    Status of the Response. Default OK.</param>
-        public ApiResponse(TOutputType outputType, ApiResponseStatus status = ApiResponseStatus.Ok)
+        /// <param name="dataResponse">Response parameters for dataResponse</param>
+        public ApiResponse(DataResponse<TOutputType> dataResponse)
         {
-            Data = outputType;
-            Status = status.ToString();
-            StatusCode = HttpStatusCode.OK;
+            Data = dataResponse.Data;
+            Status = dataResponse.Status.ToString();
+            StatusCode = dataResponse.StatusCode;
+            Error = default;
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ApiResponse{TOutputType}"/> class.
-        /// </summary>
-        /// <param name="outputType">Generic outputType.</param>
-        /// <param name="statusCode">StatusCode of the response.</param>
-        /// <param name="status">    The status of the Response. Default OK.</param>
-        public ApiResponse(TOutputType outputType, HttpStatusCode statusCode, ApiResponseStatus status = ApiResponseStatus.Ok)
+        public ApiResponse(ErrorResponse errorResponse)
         {
-            Data = outputType;
-            Status = status.ToString();
-            StatusCode = statusCode;
+            Data = default;
+            Status = errorResponse.Status.ToString();
+            StatusCode = errorResponse.StatusCode;
+            Error = errorResponse.Error;
         }
 
         /// <summary>
@@ -50,7 +44,12 @@ namespace CAPIEH
         public TOutputType Data { get; }
 
         /// <summary>
-        /// Gets the Status Flag is by default set to <see cref="ApiResponseStatus.Ok"/>.
+        /// Gets the Error Error details.
+        /// </summary>
+        public ErrorInfo Error { get; }
+
+        /// <summary>
+        /// Gets the Status Flag.
         /// </summary>
         public string Status { get; }
 
