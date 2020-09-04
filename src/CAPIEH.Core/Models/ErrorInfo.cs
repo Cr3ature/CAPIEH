@@ -1,10 +1,9 @@
 //-----------------------------------------------------------------------
 // <copyright file="ErrorInfo.cs" company="David Vanderheyden">
-//     Copyright (c) 2019 All Rights Reserved
+//     Copyright (c) 2020 All Rights Reserved
 // </copyright>
-// <licensed>Distributed under Apache2.0 license</licensed>
+// <licensed>Distributed under MIT license</licensed>
 // <author>David Vanderheyden</author>
-// <date>25/05/2019 11:11:27</date>
 //-----------------------------------------------------------------------
 
 namespace CAPIEH
