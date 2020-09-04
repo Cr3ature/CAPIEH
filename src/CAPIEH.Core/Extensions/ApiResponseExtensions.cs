@@ -6,12 +6,10 @@
 // <author>David Vanderheyden</author>
 //-----------------------------------------------------------------------
 
-namespace CAPIEH.Core.Extensions
+namespace CAPIEH
 {
     using System.Collections;
     using System.Net;
-    using CAPIEH;
-    using CAPIEH.Core.Models;
 
     /// <summary>
     /// Defines the <see cref="ApiResponseExtensions"/>.

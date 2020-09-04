@@ -10,7 +10,6 @@ namespace CAPIEH
 {
     using System;
     using System.Net;
-    using CAPIEH.Core.Models;
 
     /// <summary>
     /// Response for API request success.

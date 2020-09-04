@@ -6,7 +6,7 @@
 // <author>David Vanderheyden</author>
 //-----------------------------------------------------------------------
 
-namespace CAPIEH.Core.Models
+namespace CAPIEH
 {
     using System;
     using System.Net;
