@@ -10,7 +10,7 @@
     <Product>CAPIEH</Product>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Version>1.0.1</Version>
+    <Version>3.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
