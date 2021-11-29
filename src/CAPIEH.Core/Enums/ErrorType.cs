@@ -1,11 +1,3 @@
-//-----------------------------------------------------------------------
-// <copyright file="ErrorType.cs" company="David Vanderheyden">
-//     Copyright (c) 2020 All Rights Reserved
-// </copyright>
-// <licensed>Distributed under MIT license</licensed>
-// <author>David Vanderheyden</author>
-//-----------------------------------------------------------------------
-
 namespace CAPIEH
 {
     /// <summary>
