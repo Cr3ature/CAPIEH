@@ -1,12 +1,4 @@
-//-----------------------------------------------------------------------
-// <copyright file="ApiResponse.cs" company="David Vanderheyden">
-//     Copyright (c) 2020 All Rights Reserved
-// </copyright>
-// <licensed>Distributed under MIT license</licensed>
-// <author>David Vanderheyden</author>
-//-----------------------------------------------------------------------
-
-namespace CAPIEH
+namespace CAPIEH.Models
 {
     using System;
     using System.Net;
@@ -16,12 +8,13 @@ namespace CAPIEH
     /// </summary>
     /// <typeparam name="TOutputType">Type of the OutputType.</typeparam>
     [Serializable]
+#nullable enable
     public class ApiResponse<TOutputType>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ApiResponse{TOutputType}"/> class.
+        /// Initializes a new instance of the <see cref="ApiResponse{TOutputType}" /> class.
         /// </summary>
-        /// <param name="dataResponse">Response parameters for dataResponse</param>
+        /// <param name="dataResponse">Response parameters for dataResponse.</param>
         public ApiResponse(DataResponse<TOutputType> dataResponse)
         {
             Data = dataResponse.Data;
@@ -41,12 +34,12 @@ namespace CAPIEH
         /// <summary>
         /// Gets the Data Response data.
         /// </summary>
-        public TOutputType Data { get; }
+        public TOutputType? Data { get; }
 
         /// <summary>
         /// Gets the Error Error details.
         /// </summary>
-        public ErrorInfo Error { get; }
+        public ErrorInfo? Error { get; }
 
         /// <summary>
         /// Gets the Status Flag.
@@ -54,8 +47,10 @@ namespace CAPIEH
         public string Status { get; }
 
         /// <summary>
-        /// Gets the StatusCode The <see cref="HttpStatusCode"/>.
+        /// Gets the StatusCode The <see cref="HttpStatusCode" />.
         /// </summary>
         public HttpStatusCode StatusCode { get; }
     }
+
+#nullable restore
 }

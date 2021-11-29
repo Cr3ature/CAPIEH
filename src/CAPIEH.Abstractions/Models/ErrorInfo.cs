@@ -1,12 +1,4 @@
-//-----------------------------------------------------------------------
-// <copyright file="ErrorInfo.cs" company="David Vanderheyden">
-//     Copyright (c) 2020 All Rights Reserved
-// </copyright>
-// <licensed>Distributed under MIT license</licensed>
-// <author>David Vanderheyden</author>
-//-----------------------------------------------------------------------
-
-namespace CAPIEH
+namespace CAPIEH.Models
 {
     using System;
 
@@ -17,13 +9,13 @@ namespace CAPIEH
     public class ErrorInfo
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ErrorInfo"/> class.
+        /// Initializes a new instance of the <see cref="ErrorInfo" /> class.
         /// </summary>
-        /// <param name="type">   General error type.</param>
-        /// <param name="id">     Identifier of the error.</param>
+        /// <param name="type">General error type.</param>
+        /// <param name="id">Identifier of the error.</param>
         /// <param name="message">General error message.</param>
-        /// <param name="info">   Error information and details.</param>
-        /// <param name="code">   General code used for frontend translations.</param>
+        /// <param name="info">Error information and details.</param>
+        /// <param name="code">General code used for frontend translations.</param>
         public ErrorInfo(string type, Guid id, string message = null, object info = null, string code = null)
         {
             Type = type;
@@ -32,6 +24,11 @@ namespace CAPIEH
             Info = info;
             Code = code;
         }
+
+        /// <summary>
+        /// Gets the Code for the Error.
+        /// </summary>
+        public string Code { get; private set; }
 
         /// <summary>
         /// Gets the Id The exception ID, for later retrieval in logging.
@@ -52,10 +49,5 @@ namespace CAPIEH
         /// Gets the Type Error type, mapped from the exception type.
         /// </summary>
         public string Type { get; private set; }
-
-        /// <summary>
-        /// Gets the Code for the Error.
-        /// </summary>
-        public string Code { get; private set; }
     }
 }
