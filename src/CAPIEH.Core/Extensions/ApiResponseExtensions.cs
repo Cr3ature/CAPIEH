@@ -2,6 +2,7 @@ namespace CAPIEH
 {
     using System.Collections;
     using System.Net;
+    using CAPIEH.Models;
 
     /// <summary>
     /// Defines the <see cref="ApiResponseExtensions" />.
@@ -17,7 +18,7 @@ namespace CAPIEH
         /// <returns>The <see cref="ApiResponse{TOutput}" />.</returns>
         public static ApiResponse<TOutput> ToResponse<TOutput>(
             this TOutput outputType,
-            ApiResponseStatus status = ApiResponseStatus.Ok)
+            CapiehEnums.ApiResponseStatus status = CapiehEnums.ApiResponseStatus.Ok)
         {
             if (outputType is IEnumerable || typeof(TOutput).IsArray)
                 return new DataResponse<TOutput>(outputType, status).GetApiResponse();
@@ -36,7 +37,7 @@ namespace CAPIEH
         public static ApiResponse<TOutput> ToResponse<TOutput>(
             this TOutput outputType,
             HttpStatusCode statusCode,
-            ApiResponseStatus status = ApiResponseStatus.Ok)
+            CapiehEnums.ApiResponseStatus status = CapiehEnums.ApiResponseStatus.Ok)
         {
             if (outputType is IEnumerable || typeof(TOutput).IsArray)
                 return new DataResponse<TOutput>(outputType, statusCode, status).GetApiResponse();
@@ -53,7 +54,7 @@ namespace CAPIEH
         /// <returns>The <see cref="ApiResponse{TOutput}" />.</returns>
         public static ApiResponse<TOutput> ToResponseWithNullCheck<TOutput>(
             this TOutput outputType,
-            ApiResponseStatus status = ApiResponseStatus.Ok)
+            CapiehEnums.ApiResponseStatus status = CapiehEnums.ApiResponseStatus.Ok)
         {
             if (outputType is IEnumerable || typeof(TOutput).IsArray)
                 return new DataResponse<TOutput>(outputType, status).GetApiResponse();
@@ -74,7 +75,7 @@ namespace CAPIEH
         public static ApiResponse<TOutput> ToResponseWithNullCheck<TOutput>(
             this TOutput outputType,
             HttpStatusCode statusCode,
-            ApiResponseStatus status = ApiResponseStatus.Ok)
+            CapiehEnums.ApiResponseStatus status = CapiehEnums.ApiResponseStatus.Ok)
         {
             if (outputType is IEnumerable || typeof(TOutput).IsArray)
                 return new DataResponse<TOutput>(outputType, statusCode, status).GetApiResponse();
@@ -97,7 +98,7 @@ namespace CAPIEH
             this TOutput outputType,
             HttpStatusCode statusCode,
             string notFoundMessage,
-            ApiResponseStatus status = ApiResponseStatus.Ok)
+            CapiehEnums.ApiResponseStatus status = CapiehEnums.ApiResponseStatus.Ok)
         {
             if (outputType is IEnumerable || typeof(TOutput).IsArray)
                 return new DataResponse<TOutput>(outputType, statusCode, status).GetApiResponse();
@@ -118,7 +119,7 @@ namespace CAPIEH
         public static ApiResponse<TOutput> ToResponseWithNullCheck<TOutput>(
             this TOutput outputType,
             string notFoundMessage,
-            ApiResponseStatus status = ApiResponseStatus.Ok)
+            CapiehEnums.ApiResponseStatus status = CapiehEnums.ApiResponseStatus.Ok)
         {
             if (outputType is IEnumerable || typeof(TOutput).IsArray)
                 return new DataResponse<TOutput>(outputType, status).GetApiResponse();

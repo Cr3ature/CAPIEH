@@ -1,4 +1,4 @@
-namespace CAPIEH
+namespace CAPIEH.Models
 {
     using System;
 

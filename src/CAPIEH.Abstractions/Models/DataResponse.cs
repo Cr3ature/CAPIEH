@@ -1,4 +1,4 @@
-namespace CAPIEH
+namespace CAPIEH.Models
 {
     using System;
     using System.Net;
@@ -15,7 +15,7 @@ namespace CAPIEH
      /// Response. Default OK.</param>
         public DataResponse(
             TOutputType outputType,
-            ApiResponseStatus status = ApiResponseStatus.Ok)
+            CapiehEnums.ApiResponseStatus status = CapiehEnums.ApiResponseStatus.Ok)
         {
             Data = outputType;
             Status = status;
@@ -31,7 +31,7 @@ namespace CAPIEH
         public DataResponse(
             TOutputType outputType,
             HttpStatusCode statusCode,
-            ApiResponseStatus status = ApiResponseStatus.Ok)
+            CapiehEnums.ApiResponseStatus status = CapiehEnums.ApiResponseStatus.Ok)
         {
             Data = outputType;
             Status = status;
@@ -46,7 +46,7 @@ namespace CAPIEH
         /// <summary>
         /// Gets the Status Flag is by default set to <see cref="ApiResponseStatus.Ok" />.
         /// </summary>
-        public ApiResponseStatus Status { get; }
+        public CapiehEnums.ApiResponseStatus Status { get; }
 
         /// <summary>
         /// Gets the StatusCode The <see cref="HttpStatusCode" />.

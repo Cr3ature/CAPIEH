@@ -1,4 +1,4 @@
-namespace CAPIEH
+namespace CAPIEH.Models
 {
     using System;
     using System.Net;
@@ -18,10 +18,10 @@ namespace CAPIEH
         /// <param name="info">Error information and details.</param>
         /// <param name="code">General code used for frontend translations.</param>
         /// <param name="statusCode">Status code that represents the response.</param>
-        public ErrorResponse(ErrorType errorType, HttpStatusCode statusCode, Guid errorId, string message, string code, object info = null)
+        public ErrorResponse(CapiehEnums.ErrorType errorType, HttpStatusCode statusCode, Guid errorId, string message, string code, object info = null)
         {
             StatusCode = statusCode;
-            Status = ApiResponseStatus.NotOk;
+            Status = CapiehEnums.ApiResponseStatus.NotOk;
             Error = new ErrorInfo(
                 type: errorType.ToString(),
                 id: errorId,
@@ -38,7 +38,7 @@ namespace CAPIEH
         /// <summary>
         /// Gets the Status Flag is always set to <see cref="ApiResponseStatus.NotOk" />.
         /// </summary>
-        public ApiResponseStatus Status { get; }
+        public CapiehEnums.ApiResponseStatus Status { get; }
 
         /// <summary>
         /// Gets the StatusCode The <see cref="HttpStatusCode" />.

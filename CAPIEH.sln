@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29403.142
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 Solution Items", "00 Solution Items", "{7932362A-E5DD-4A92-AC3F-6371F4D5193E}"
 	ProjectSection(SolutionItems) = preProject
@@ -10,7 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 Solution Items", "00 Sol
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CAPIEH.Core", "src\CAPIEH.Core\CAPIEH.Core.csproj", "{2966C28E-D13A-4EA6-8B49-8EC729BB0543}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CAPIEH", "src\CAPIEH.Core\CAPIEH.csproj", "{2966C28E-D13A-4EA6-8B49-8EC729BB0543}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CAPIEH.Abstractions", "src\CAPIEH.Abstractions\CAPIEH.Abstractions.csproj", "{7A3623B5-CE05-410B-8C42-4F482647ABCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +24,10 @@ Global
 		{2966C28E-D13A-4EA6-8B49-8EC729BB0543}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2966C28E-D13A-4EA6-8B49-8EC729BB0543}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2966C28E-D13A-4EA6-8B49-8EC729BB0543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A3623B5-CE05-410B-8C42-4F482647ABCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A3623B5-CE05-410B-8C42-4F482647ABCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A3623B5-CE05-410B-8C42-4F482647ABCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A3623B5-CE05-410B-8C42-4F482647ABCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
